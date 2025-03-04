@@ -1,0 +1,267 @@
+*,
+h1 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #f8f0e5; /* Softer cream background */
+  color: #111;
+  padding: 4rem 2rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Grid background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(#a5d7e8 1px, transparent 1px),
+    linear-gradient(90deg, #a5d7e8 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.2rem;
+  color: #000;
+  display: inline-block;
+  line-height: 1.1;
+  position: relative;
+  z-index: 1;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 1.2em;
+  background: #76abae;
+  left: -5%;
+  bottom: 0;
+  z-index: -1;
+  transform: rotate(-1deg);
+}
+
+header p {
+  color: #222;
+  font-size: 1.8rem;
+  max-width: 80%;
+  margin: 1.5rem auto 0;
+  font-weight: 500;
+  position: relative;
+}
+
+/* Random shape decorations */
+.shape-1 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ff9eaa;
+  top: -20px;
+  right: 15%;
+  z-index: 0;
+  border: 2px solid #000;
+}
+
+.shape-2 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #fff56d;
+  bottom: 10%;
+  left: 5%;
+  z-index: 0;
+  transform: rotate(45deg);
+  border: 2px solid #000;
+}
+
+main {
+  width: min(600px, 100%);
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  background: white;
+  border-radius: 12px;
+  padding: 3rem;
+  border: 2px solid #000;
+  box-shadow: 6px 6px 0 #000;
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+
+main img {
+  object-fit: contain;
+  height: 80%;
+  border: 2px solid #000;
+  border-radius: 8px;
+  margin-bottom: 2.5rem;
+  background: #eaeaea;
+  padding: 0.8rem;
+  position: relative;
+  z-index: 0;
+}
+
+main p {
+  text-align: center;
+  font-size: 1.7rem;
+  color: #000;
+  font-weight: 500;
+  line-height: 1.6;
+  padding: 1.2rem 1.8rem;
+  background-color: #acddde;
+  border: 2px solid #000;
+  box-shadow: 3px 3px 0 #000;
+  width: 90%;
+  border-radius: 8px;
+  hyphens: auto;
+}
+
+/* Style for the refresh button */
+#refresh {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  background: #ffda77;
+  color: #000;
+  border: 2px solid #000;
+  padding: 1.2rem 3rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  box-shadow: 4px 4px 0 #000;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+#refresh::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+#refresh:hover::before {
+  left: 100%;
+}
+
+#refresh:hover {
+  transform: translateY(-3px);
+  box-shadow: 4px 7px 0 #000;
+}
+
+#refresh:active {
+  transform: translateY(0);
+  box-shadow: 2px 2px 0 #000;
+}
+
+footer {
+  margin-top: 2rem;
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.8rem 1.8rem;
+  background-color: #cab8ff;
+  border: 2px solid #000;
+  border-radius: 30px;
+  position: relative;
+}
+
+/* Add decorative elements to the page */
+.decorative-element-1 {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 10%;
+  left: 8%;
+  z-index: -1;
+  transform: rotate(15deg);
+  opacity: 0.7;
+}
+
+.decorative-element-2 {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FF5C5C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: 15%;
+  right: 10%;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+/* Add hidden container divs for the shapes */
+#shape-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  body {
+    padding: 2rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  .decorative-element-1,
+  .decorative-element-2 {
+    display: none;
+  }
+}
