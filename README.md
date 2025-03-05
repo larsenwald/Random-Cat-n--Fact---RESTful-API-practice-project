@@ -27,5 +27,5 @@ npm i
 ### Run the server
 
 ```sh
-nodemon index.js
+node index.js
 ```
